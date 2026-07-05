@@ -1,0 +1,163 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #e5e7eb;
+  background: linear-gradient(135deg, #0B0F19, #111827);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND GLOW EFFECT */
+body::before {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99,102,241,0.25), transparent 70%);
+  top: -100px;
+  left: -100px;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6,182,212,0.2), transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(17, 24, 39, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #a78bfa !important;
+}
+
+.nav-link {
+  color: #d1d5db !important;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #06b6d4 !important;
+  text-shadow: 0 0 8px #06b6d4;
+}
+
+/* HEADINGS */
+h1 {
+  font-weight: 600;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #06b6d4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+}
+
+/* GLASS CARDS */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.4s ease;
+  color: #e5e7eb;
+}
+
+/* CARD HOVER GLOW */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border: 1px solid rgba(167,139,250,0.6);
+  box-shadow: 0 0 25px rgba(167,139,250,0.3);
+}
+
+/* TEXT */
+p {
+  color: #9ca3af;
+}
+
+/* SKILLS BOX STYLE */
+#skills .col-md-4 {
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+#skills .col-md-4:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-5px);
+}
+
+/* CONTACT LINKS */
+#contact p {
+  transition: 0.3s;
+}
+
+#contact p:hover {
+  color: #06b6d4;
+  text-shadow: 0 0 6px #06b6d4;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* MOBILE TWEAK */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .glow-btn {
+  background: linear-gradient(90deg, #06b6d4, #a78bfa);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 15px #06b6d4;
+  transform: scale(1.05);
+  .glow-btn {
+  background: linear-gradient(90deg, #06b6d4, #a78bfa);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 20px #06b6d4;
+  transform: scale(1.05);
+}
+}
+}
